@@ -14,6 +14,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { Userdata } from "./userdata.tsx";
 import { UseDispatch, useDispatch } from "react-redux";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const Landingpage = () => {
   const [openpopover, setpopover] = useState(false);
   const [firstname, setfirstname] = useState("");

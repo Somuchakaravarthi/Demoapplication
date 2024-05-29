@@ -18,6 +18,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 // import { UserInfo } from "../redux/action";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { RootState } from "../redux/store";
 function createData(
   name: string,
