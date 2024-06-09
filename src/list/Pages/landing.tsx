@@ -146,10 +146,14 @@ export const Landingpage = () => {
             </a>
             </div>
             <div style={{marginLeft:'12px'}}>
+              <a  target='_blank' href="https://www.linkedin.com/in/somu-chakaravarthi-in">
             <Linkedin/>
+            </a>
             </div>
             <div style={{marginLeft:'12px'}} >
+              <a target='_blank' href="https://www.instagram.com/to0_stroker_?utm_source=qr&igsh=cmVoNmRpNjE5MGFw">
               <Instaicon/>
+              </a>
             </div>
         </div>
       </div>
