@@ -1,6 +1,7 @@
 import { createStore } from "redux";
 // import thunk from "redux-thunk";
 import { applyMiddleware, compose } from "redux";
+import { Userdata } from "../Pages/userdata";
 export interface RootState {
   Userdata: any[];
 }
@@ -20,6 +21,7 @@ const intialstate: RootState = {
 //       )
 //     : compose(applyMiddleware(...middleware));
 export const USERDATA = "USER_DATA";
+export const REMOVEUSER = "REMOVE_USER";
 //Reducer
 const reducer = (state: RootState = intialstate, action: any) => {
   switch (action.type) {
@@ -27,9 +29,18 @@ const reducer = (state: RootState = intialstate, action: any) => {
       return {
         ...state,
         // Userdata: action.payload,
-        // Userdata: [...state.Userdata, action.payload],
-        Userdata: state.Userdata.concat(action.payload),
+        Userdata: [...state.Userdata, action.payload],
+        // Userdata: state.Userdata.concat(action.payload),
+        // selectedAgent: [...state.selectedAgent, action.payload],
       };
+    case REMOVEUSER:
+      const { id } = action.payload || {};
+      return {
+        ...state,
+        // Userdata: state.Userdata.filter((detail) => detail !== action.payload),
+        Userdata: state.Userdata.filter((detail) => detail.id !== id),
+      };
+
     default:
       return state;
   }
